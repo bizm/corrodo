@@ -1,0 +1,10 @@
+[package]
+name = "rust-greetings"
+version = "0.1.0"
+authors = ["Valentyn Derkach <valentyn.derkach@siili.com>"]
+edition = "2018"
+
+[dependencies]
+hyper = "0.12"
+pretty_env_logger = "0.3.0"
+hostname = "0.1.5"

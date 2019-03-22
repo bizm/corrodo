@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rust-greetings
+  labels:
+    app: rust-greetings
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rust-greetings
+  template:
+    metadata:
+      labels:
+        app: rust-greetings
+    spec:
+      containers:
+      - name: rust-greetings
+        image: gcr.io/corrodo/rust-greetings:latest
+        ports:
+        - containerPort: 8080
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: rust-greetings
+spec:
+  selector:
+    app: rust-greetings
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
