@@ -1,6 +1,6 @@
 # corrodo
 
-...
+Simple Rust test app running on a Google Kubernetes Engine. Will write proper documentation someday sometime.
 
 ## Rust greetings
 
@@ -50,4 +50,4 @@ kubectl create clusterrolebinding cluster-admin-binding --clusterrole cluster-ad
 
 ## Deployment on GKE
 
-Just go to [k8s-config](/k8s-config) directory and run `kubectl apply -f .`. Check it on [corrodo.bizm.co.ua](http://corrodo.bizm.co.ua).
+Just go to [k8s-config](/k8s-config) directory and run `kubectl apply -f .`. Check it on [corrodo.bizm.co.ua](http://corrodo.bizm.co.ua) (currently is not deployed, sorry).
